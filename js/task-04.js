@@ -1,7 +1,6 @@
-let counterValue = document.querySelector('#value')
+let value = document.querySelector('#value')
 
-let value = counterValue.textContent
-
+let counterValue = value.textContent
 
 const addListenerBtn = document.querySelector('[data-action="increment"]')
 console.log(addListenerBtn);
@@ -15,10 +14,10 @@ addListenerBtn.addEventListener('click', increment)
 removeListenerBtn.addEventListener('click', decrement);
 
 function increment() {
-  value = Number(value) + 1
-    counterValue.textContent = value
+  counterValue = Number(counterValue) + 1
+    value.textContent = counterValue
 }
 
 function decrement() {
-    counterValue.textContent -= 1
+    value.textContent -= 1
 }

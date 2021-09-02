@@ -6,12 +6,7 @@ refs.input.addEventListener('blur', onInputBlur)
 
 function onInputBlur() {
     let length = Number(refs.input.getAttribute('data-length'))
-    if (refs.input.value.length === length) {
-        refs.input.classList.add('valid')
-        refs.input.classList.remove('invalid')
-       
-    } else if (refs.input.textContent.length !== length) {
-        refs.input.classList.add('invalid')
-        refs.input.classList.remove('valid')
-    }
+    let inputClassList = refs.input.classList
+    inputClassList.add("valid", "invalid")
+    refs.input.value.length === length ? inputClassList.remove('invalid') : inputClassList.remove('valid')
 }

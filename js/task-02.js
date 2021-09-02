@@ -12,10 +12,11 @@ console.log(ingredientsEl);
 
 const ingredientsArrayEl = []
 
-ingredients.forEach(ingredients => {
+ingredients.map(ingredients => {
     const itemEl = document.createElement('li');
     itemEl.classList.add('ingredients-item');
     itemEl.textContent = ingredients;
     ingredientsArrayEl.push(itemEl)
 })
+
 ingredientsEl.append(...ingredientsArrayEl)
